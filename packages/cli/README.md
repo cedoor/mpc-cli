@@ -7,7 +7,7 @@
 
 <p align="center">
     <a href="https://github.com/cedoor/mpc-cli" target="_blank">
-        <img src="https://img.shields.io/badge/project-MPC-CLI-blue.svg?style=flat-square">
+        <img src="https://img.shields.io/badge/project-MPC_CLI-blue.svg?style=flat-square">
     </a>
     <a href="https://github.com/cedoor/mpc-cli/blob/main/LICENSE">
         <img alt="NPM license" src="https://img.shields.io/npm/l/@mpc-cli/create?style=flat-square">
