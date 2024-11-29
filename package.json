@@ -14,8 +14,7 @@
         "version:bump": "scripts/version.ts ${0}",
         "version:publish": "scripts/publish.ts",
         "version:release": "changelogithub",
-        "clean": "scripts/clean-packages.ts && yarn clean:cli-templates && rimraf node_modules",
-        "clean:cli-templates": "scripts/clean-cli-templates.ts",
+        "clean": "scripts/clean-packages.ts && rimraf node_modules",
         "remove:stable-version-field": "scripts/remove-stable-version-field.ts && yarn format:write",
         "precommit": "lint-staged",
         "postinstall": "husky && git config --local core.editor cat"

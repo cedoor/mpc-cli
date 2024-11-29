@@ -25,7 +25,7 @@ const supportedTemplates = [
 
 // Setup the CLI program with basic information and help text.
 program
-    .name("mpc-create-app")
+    .name("mpc-cli-create")
     .description(description)
     .version(version, "-v, --version", "Show MPC-create-app version.")
     .argument("[project-directory]", "Directory of the project.")

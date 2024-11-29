@@ -1,6 +1,6 @@
 <p align="center">
     <h1 align="center">
-        MPC Create App
+        MPC CLI Create
     </h1>
     <p align="center">A streamlined tool for creating Multi-Party Computation (MPC) projects with ease.</p>
 </p>
@@ -10,13 +10,13 @@
         <img src="https://img.shields.io/badge/project-MPC-CLI-blue.svg?style=flat-square">
     </a>
     <a href="https://github.com/cedoor/mpc-cli/blob/main/LICENSE">
-        <img alt="NPM license" src="https://img.shields.io/npm/l/create-mpc-app?style=flat-square">
+        <img alt="NPM license" src="https://img.shields.io/npm/l/@mpc-cli/create?style=flat-square">
     </a>
-    <a href="https://www.npmjs.com/package/create-mpc-app">
-        <img alt="NPM version" src="https://img.shields.io/npm/v/create-mpc-app?style=flat-square" />
+    <a href="https://www.npmjs.com/package/@mpc-cli/create">
+        <img alt="NPM version" src="https://img.shields.io/npm/v/@mpc-cli/create?style=flat-square" />
     </a>
-    <a href="https://npmjs.org/package/create-mpc-app">
-        <img alt="Downloads" src="https://img.shields.io/npm/dm/create-mpc-app.svg?style=flat-square" />
+    <a href="https://npmjs.org/package/@mpc-cli/create">
+        <img alt="Downloads" src="https://img.shields.io/npm/dm/@mpc-cli/create.svg?style=flat-square" />
     </a>
     <a href="https://eslint.org/">
         <img alt="Linter eslint" src="https://img.shields.io/badge/linter-eslint-8080f2?style=flat-square&logo=eslint" />
@@ -45,7 +45,7 @@
 ## 🛠 Usage
 
 ```bash
-npx create-mpc-app my-app
+npx @mpc-cli/create my-app
 cd my-app
 npm install
 npm run dev

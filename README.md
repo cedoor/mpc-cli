@@ -42,7 +42,7 @@
     </h4>
 </div>
 
-Visit [create-mpc-app](https://github.com/cedoor/mpc-cli/tree/main/packages/cli) for detailed instructions on how to create your MPC project.
+Visit [@mpc-cli/create](https://github.com/cedoor/mpc-cli/tree/main/packages/cli) for detailed instructions on how to create your MPC project.
 
 ## 🛠 Install
 

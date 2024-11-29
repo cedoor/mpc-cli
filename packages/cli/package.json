@@ -1,11 +1,11 @@
 {
-    "name": "create-mpc-app",
+    "name": "@mpc-cli/create",
     "type": "module",
     "version": "0.1.0",
     "description": "A streamlined tool for creating Multi-Party Computation (MPC) projects with ease.",
     "license": "MIT",
     "bin": {
-        "mpc-cli": "dist/index.js"
+        "mpc-cli-create": "dist/index.js"
     },
     "types": "dist/types/index.d.ts",
     "files": [
