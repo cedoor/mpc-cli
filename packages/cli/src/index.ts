@@ -1,14 +1,14 @@
 import chalk from "chalk"
 import { program } from "commander"
-import decompress from "decompress"
-import { existsSync, readFileSync, unlinkSync, writeFileSync } from "fs"
+// import decompress from "decompress"
+import { existsSync, readFileSync } from "fs"
 import logSymbols from "log-symbols"
 import pacote from "pacote"
 import { dirname } from "path"
 import { fileURLToPath } from "url"
 import checkLatestVersion from "./checkLatestVersion.js"
-import { getProjectName, getSupportedTemplate } from "./inquirerPrompts.js"
-import removePrePublishScript from "./removePrePublishScript.js"
+import { getProjectName } from "./inquirerPrompts.js"
+// import removePrePublishScript from "./removePrePublishScript.js"
 import Spinner from "./spinner.js"
 
 // Define the path to the package.json file to extract metadata for the CLI.
@@ -29,16 +29,16 @@ program
     .description(description)
     .version(version, "-v, --version", "Show MPC-create-app version.")
     .argument("[project-directory]", "Directory of the project.")
-    .option("-t, --template <template-name>", "Supported template.")
+    // .option("-t, --template <template-name>", "Supported template.")
     .allowExcessArguments(false)
-    .action(async (projectDirectory, { template }) => {
+    .action(async (projectDirectory, { template = "hello" }) => {
         if (!projectDirectory) {
             projectDirectory = await getProjectName()
         }
 
-        if (!template) {
-            template = await getSupportedTemplate(supportedTemplates)
-        }
+        // if (!template) {
+        //    template = await getSupportedTemplate(supportedTemplates)
+        // }
 
         if (!supportedTemplates.some((t) => t.value === template)) {
             console.info(`\n ${logSymbols.error}`, `error: the template '${template}' is not supported\n`)
@@ -61,16 +61,16 @@ program
         await pacote.extract(`@mpc-cli/template-${template}@${version}`, `${currentDirectory}/${projectDirectory}`)
 
         // Decompress the template files after extraction.
-        await decompress(`${currentDirectory}/${projectDirectory}/files.tgz`, `${currentDirectory}/${projectDirectory}`)
+        // await decompress(`${currentDirectory}/${projectDirectory}/files.tgz`, `${currentDirectory}/${projectDirectory}`)
 
         // Clean up the compressed file after extraction.
-        unlinkSync(`${currentDirectory}/${projectDirectory}/files.tgz`)
+        // unlinkSync(`${currentDirectory}/${projectDirectory}/files.tgz`)
 
         // Read and modify package.json to remove prepublish script
         const packageJsonPath = `${currentDirectory}/${projectDirectory}/package.json`
         const packageJsonContent = readFileSync(packageJsonPath, "utf8")
-        const updatedPackageJsonContent = removePrePublishScript(packageJsonContent)
-        writeFileSync(packageJsonPath, updatedPackageJsonContent)
+        // const updatedPackageJsonContent = removePrePublishScript(packageJsonContent)
+        // writeFileSync(packageJsonPath, updatedPackageJsonContent)
 
         spinner.stop()
 
@@ -80,7 +80,7 @@ program
         console.info(`   ${chalk.cyan("npm install")}\n`)
 
         // Read the package.json to list available npm scripts.
-        const { scripts } = JSON.parse(updatedPackageJsonContent)
+        const { scripts } = JSON.parse(packageJsonContent)
 
         if (scripts) {
             console.info(` Available scripts:\n`)

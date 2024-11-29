@@ -3,15 +3,15 @@
     "version": "0.2.1",
     "type": "module",
     "files": [
-        "files.tgz",
-        ".editorconfig",
+        "src",
+        ".eslintrc.cjs",
+        ".gitignore",
         "README.md"
     ],
     "scripts": {
         "dev": "vite --host 0.0.0.0",
         "build": "tsc && vite build",
-        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "prepublish": "tar --exclude node_modules --exclude build -czf files.tgz .gitignore"
+        "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
     },
     "dependencies": {
         "emp-wasm-backend": "^0.1.0",
