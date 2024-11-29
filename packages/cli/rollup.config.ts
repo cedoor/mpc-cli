@@ -17,15 +17,8 @@ const banner = `#!/usr/bin/env node
 
 export default {
     input: "src/index.ts",
-    output: [{ file: pkg.bin.semaphore, format: "es", banner }],
-    external: [
-        ...Object.keys(pkg.dependencies),
-        "url",
-        "fs",
-        "path",
-        "child_process",
-        "@semaphore-protocol/utils/networks"
-    ],
+    output: [{ file: pkg.bin["mpc-cli-create"], format: "es", banner }],
+    external: [...Object.keys(pkg.dependencies), "url", "fs", "path", "child_process"],
     plugins: [
         typescript({
             tsconfig: "./build.tsconfig.json"
