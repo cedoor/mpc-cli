@@ -1,0 +1,31 @@
+# dependencies
+node_modules
+package-lock.json
+yarn.lock
+.yarn
+
+# testing
+coverage
+coverage.json
+
+# types
+types
+
+# production
+dist
+build
+
+# templates
+/packages/template-*
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# packages
+cli-template-*

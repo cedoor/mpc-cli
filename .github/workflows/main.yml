@@ -1,0 +1,53 @@
+name: production
+
+on:
+    push:
+        branches:
+            - main
+    pull_request:
+
+jobs:
+    style:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Build libraries
+              run: yarn build
+
+            - name: Format code
+              run: yarn format
+
+            - name: Run Eslint
+              run: yarn lint
+
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Install Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: yarn
+
+            - name: Install dependencies
+              run: yarn
+
+            - name: Build libraries
+              run: yarn build
+
+            - name: Test libraries
+              run: yarn test
