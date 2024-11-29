@@ -13,7 +13,7 @@
         <img alt="Github license" src="https://img.shields.io/github/license/cedoor/mpc-cli.svg?style=flat-square">
     </a>
     <a href="https://github.com/cedoor/mpc-cli/actions?query=workflow%3Amain">
-        <img alt="GitHub Workflow" src="https://img.shields.io/github/actions/workflow/status/cedoor/mpc-cli/main.yml?branch=main&label=test&style=flat-square&logo=github">
+        <img alt="GitHub Workflow" src="https://img.shields.io/github/actions/workflow/status/cedoor/mpc-cli/main.yml?branch=main&label=build&style=flat-square&logo=github">
     </a>
     <a href="https://eslint.org/">
         <img alt="Linter eslint" src="https://img.shields.io/badge/linter-eslint-8080f2?style=flat-square&logo=eslint">
