@@ -510,6 +510,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@mpc-cli/create@workspace:packages/cli":
+  version: 0.0.0-use.local
+  resolution: "@mpc-cli/create@workspace:packages/cli"
+  dependencies:
+    "@rollup/plugin-typescript": "npm:^11.1.6"
+    "@types/figlet": "npm:^1.5.8"
+    "@types/inquirer": "npm:^9.0.7"
+    "@types/pacote": "npm:^11.1.8"
+    "@types/semver": "npm:^7.5.8"
+    axios: "npm:^1.6.7"
+    boxen: "npm:^7.1.1"
+    chalk: "npm:^5.3.0"
+    commander: "npm:^12.0.0"
+    decompress: "npm:^4.2.1"
+    figlet: "npm:^1.7.0"
+    inquirer: "npm:^9.2.15"
+    log-symbols: "npm:^6.0.0"
+    ora: "npm:^8.0.1"
+    pacote: "npm:^17.0.6"
+    rimraf: "npm:^5.0.5"
+    rollup: "npm:^4.12.0"
+    rollup-plugin-cleanup: "npm:^3.2.1"
+    semver: "npm:^7.6.0"
+  bin:
+    mpc-cli-create: dist/index.js
+  languageName: unknown
+  linkType: soft
+
 "@mpc-cli/template-hello@workspace:packages/template-hello":
   version: 0.0.0-use.local
   resolution: "@mpc-cli/template-hello@workspace:packages/template-hello"
@@ -2235,34 +2263,6 @@ __metadata:
   checksum: 10/8bdf1dfbb6fdb3755195b6886dc0649a3c742ec75afa4cb8da7b070936aed22a4f4e5b7359faafe03180358f311dbc300d248fd6586c458203d376a40cc77826
   languageName: node
   linkType: hard
-
-"create-mpc-app@workspace:packages/cli":
-  version: 0.0.0-use.local
-  resolution: "create-mpc-app@workspace:packages/cli"
-  dependencies:
-    "@rollup/plugin-typescript": "npm:^11.1.6"
-    "@types/figlet": "npm:^1.5.8"
-    "@types/inquirer": "npm:^9.0.7"
-    "@types/pacote": "npm:^11.1.8"
-    "@types/semver": "npm:^7.5.8"
-    axios: "npm:^1.6.7"
-    boxen: "npm:^7.1.1"
-    chalk: "npm:^5.3.0"
-    commander: "npm:^12.0.0"
-    decompress: "npm:^4.2.1"
-    figlet: "npm:^1.7.0"
-    inquirer: "npm:^9.2.15"
-    log-symbols: "npm:^6.0.0"
-    ora: "npm:^8.0.1"
-    pacote: "npm:^17.0.6"
-    rimraf: "npm:^5.0.5"
-    rollup: "npm:^4.12.0"
-    rollup-plugin-cleanup: "npm:^3.2.1"
-    semver: "npm:^7.6.0"
-  bin:
-    mpc-cli: dist/index.js
-  languageName: unknown
-  linkType: soft
 
 "create-require@npm:^1.1.0":
   version: 1.1.1
