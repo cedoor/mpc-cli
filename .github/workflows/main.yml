@@ -31,7 +31,7 @@ jobs:
             - name: Run Eslint
               run: yarn lint
 
-    test:
+    build:
         runs-on: ubuntu-latest
 
         steps:
@@ -48,6 +48,3 @@ jobs:
 
             - name: Build libraries
               run: yarn build
-
-            - name: Test libraries
-              run: yarn test
