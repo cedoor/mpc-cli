@@ -4,7 +4,11 @@
     "type": "module",
     "files": [
         "src",
+        "index.html",
         ".eslintrc.cjs",
+        "tsconfig.json",
+        "tsconfig.node.json",
+        "vite.config.ts",
         ".gitignore",
         "README.md"
     ],
