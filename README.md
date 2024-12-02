@@ -42,9 +42,26 @@
     </h4>
 </div>
 
-Visit [@mpc-cli/create](https://github.com/cedoor/mpc-cli/tree/main/packages/cli) for detailed instructions on how to create your MPC project.
+| MPC-CLI is an interactive command-line tool that simplifies the development of multi-party computation (MPC) web applications with modern web development frameworks (e.g. Next.js, Vite). MPC-CLI is powered by `mpc-framework`, a lightweight framework that makes implementing MPC in TS straightforward. For more details, visit the [repository](https://github.com/voltrevo/mpc-framework). |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-## 🛠 Install
+## CLI Usage
+
+```bash
+npx @mpc-cli/create
+cd <your-app>
+npm install
+npm run dev
+```
+
+## Supported Templates
+
+When creating a new project, you can choose from several templates:
+
+- [**mpc-hello-next**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-next): An "Hello World" MPC app built with [Next.js](https://nextjs.org/).
+- [**mpc-hello-vite**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-vite): An "Hello World" MPC app built with [Vite](https://vite.dev).
+
+## Repo Usage
 
 Clone this repository:
 

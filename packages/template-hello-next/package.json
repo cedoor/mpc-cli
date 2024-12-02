@@ -1,15 +1,16 @@
 {
-    "name": "@mpc-cli/template-hello",
+    "name": "@mpc-cli/template-hello-vite",
     "version": "0.2.3",
     "type": "module",
     "files": [
+        "!dist/*",
         "src",
         "index.html",
         ".eslintrc.cjs",
         "tsconfig.json",
         "tsconfig.node.json",
         "vite.config.ts",
-        ".gitignore",
+        "gitignore",
         "README.md"
     ],
     "scripts": {

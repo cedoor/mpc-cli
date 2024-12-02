@@ -42,17 +42,18 @@
     </h4>
 </div>
 
-## 🛠 Usage
+## Usage
 
 ```bash
-npx @mpc-cli/create my-app
-cd my-app
+npx @mpc-cli/create
+cd <your-app>
 npm install
 npm run dev
 ```
 
-## 📦 Supported Templates
+## Supported Templates
 
 When creating a new project, you can choose from several templates:
 
-- **mpc-hello**: An "Hello World" MPC app.
+- [**mpc-hello-next**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-next): An "Hello World" MPC app built with [Next.js](https://nextjs.org/).
+- [**mpc-hello-vite**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-vite): An "Hello World" MPC app built with [Vite](https://vite.dev).

@@ -1,14 +1,12 @@
 import chalk from "chalk"
 import { program } from "commander"
-// import decompress from "decompress"
-import { existsSync, readFileSync } from "fs"
+import { existsSync, readFileSync, renameSync } from "fs"
 import logSymbols from "log-symbols"
 import pacote from "pacote"
 import { dirname } from "path"
 import { fileURLToPath } from "url"
 import checkLatestVersion from "./checkLatestVersion.js"
-import { getProjectName } from "./inquirerPrompts.js"
-// import removePrePublishScript from "./removePrePublishScript.js"
+import { getProjectName, getSupportedTemplate } from "./inquirerPrompts.js"
 import Spinner from "./spinner.js"
 
 // Define the path to the package.json file to extract metadata for the CLI.
@@ -18,8 +16,12 @@ const { description, version } = JSON.parse(readFileSync(`${packagePath}/package
 // List of supported templates for project creation.
 const supportedTemplates = [
     {
-        value: "hello",
-        name: "React + Vite + MPC-framework"
+        value: "hello-vite",
+        name: "MPC Hello (Vite)"
+    },
+    {
+        value: "hello-next",
+        name: "MPC Hello (Next.js)"
     }
 ]
 
@@ -29,16 +31,16 @@ program
     .description(description)
     .version(version, "-v, --version", "Show MPC-create-app version.")
     .argument("[project-directory]", "Directory of the project.")
-    // .option("-t, --template <template-name>", "Supported template.")
+    .option("-t, --template <template-name>", "Supported template.")
     .allowExcessArguments(false)
     .action(async (projectDirectory, { template = "hello" }) => {
         if (!projectDirectory) {
             projectDirectory = await getProjectName()
         }
 
-        // if (!template) {
-        //    template = await getSupportedTemplate(supportedTemplates)
-        // }
+        if (!template) {
+            template = await getSupportedTemplate(supportedTemplates)
+        }
 
         if (!supportedTemplates.some((t) => t.value === template)) {
             console.info(`\n ${logSymbols.error}`, `error: the template '${template}' is not supported\n`)
@@ -60,17 +62,15 @@ program
         // Extract the template package into the project directory.
         await pacote.extract(`@mpc-cli/template-${template}@${version}`, `${currentDirectory}/${projectDirectory}`)
 
-        // Decompress the template files after extraction.
-        // await decompress(`${currentDirectory}/${projectDirectory}/files.tgz`, `${currentDirectory}/${projectDirectory}`)
-
-        // Clean up the compressed file after extraction.
-        // unlinkSync(`${currentDirectory}/${projectDirectory}/files.tgz`)
+        // Rename the gitignore file to .gitignore.
+        renameSync(
+            `${currentDirectory}/${projectDirectory}/gitignore`,
+            `${currentDirectory}/${projectDirectory}/.gitignore`
+        )
 
         // Read and modify package.json to remove prepublish script
         const packageJsonPath = `${currentDirectory}/${projectDirectory}/package.json`
         const packageJsonContent = readFileSync(packageJsonPath, "utf8")
-        // const updatedPackageJsonContent = removePrePublishScript(packageJsonContent)
-        // writeFileSync(packageJsonPath, updatedPackageJsonContent)
 
         spinner.stop()
 

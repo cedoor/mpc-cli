@@ -1,6 +1,6 @@
 # mpc-hello
 
-This is a template repository designed to be the hello-world of
+This is a Vite template repository designed to be the hello-world of
 [mpc-framework](https://github.com/voltrevo/mpc-framework).
 
 It uses [summon](https://github.com/voltrevo/summon) for circuit generation
