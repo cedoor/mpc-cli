@@ -1,7 +1,7 @@
 {
     "name": "@mpc-cli/create",
     "type": "module",
-    "version": "0.2.3",
+    "version": "0.3.0",
     "description": "A streamlined tool for creating Multi-Party Computation (MPC) projects with ease.",
     "license": "MIT",
     "bin": {
