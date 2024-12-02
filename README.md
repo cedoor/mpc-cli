@@ -2,7 +2,7 @@
     <h1 align="center">
         MPC CLI
     </h1>
-    <p align="center">A streamlined tool for creating Multi-Party Computation (MPC) projects with ease.</p>
+    <p align="center">A streamlined tool for creating Multi-Party Computation (MPC) web projects with ease.</p>
 </p>
 
 <p align="center">

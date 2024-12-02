@@ -1,5 +1,5 @@
 {
-    "name": "@mpc-cli/template-hello-vite",
+    "name": "@mpc-cli/template-hello-next",
     "version": "0.2.3",
     "type": "module",
     "files": [
