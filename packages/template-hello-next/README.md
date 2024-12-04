@@ -1,6 +1,6 @@
 # mpc-hello
 
-This is a Next.js template repository designed to be the hello-world of
+This is a React/Next.js template repository designed to be the hello-world of
 [mpc-framework](https://github.com/voltrevo/mpc-framework).
 
 It uses [summon](https://github.com/voltrevo/summon) for circuit generation
@@ -9,8 +9,6 @@ secure 2PC.
 
 It's a minimal web app where users can make 1-to-1 connections with each other
 and compute the larger of two numbers.
-
-Hosted on github pages: https://voltrevo.github.io/mpc-hello/.
 
 ## Running Locally
 

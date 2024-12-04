@@ -17,11 +17,11 @@ const { description, version } = JSON.parse(readFileSync(`${packagePath}/package
 const supportedTemplates = [
     {
         value: "hello-vite",
-        name: "MPC Hello (Vite)"
+        name: "MPC Hello with Vue and Vite"
     },
     {
         value: "hello-next",
-        name: "MPC Hello (Next.js)"
+        name: "MPC Hello with React and Next.js"
     }
 ]
 

@@ -1,15 +1,4 @@
-body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  background-color: #f9f9f9;
-  flex-direction: column;
-}
-
-button {
+.button {
   font-size: 1rem;
   padding: 10px 20px;
   border: none;
@@ -29,15 +18,15 @@ button {
   border-top-right-radius: 8px;
 }
 
-a {
+.a {
   color: #007bff;
   text-decoration: none;
 }
 
-h1 {
-  margin: 0;
-  font-size: 1.75rem;
-}
+/*.h1 {*/
+  /*margin: 0;*/
+  /*font-size: 1.75rem;*/
+/*}*/
 
 .app {
   min-height: 18em;
