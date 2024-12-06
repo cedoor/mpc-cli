@@ -31,9 +31,9 @@ program
     .description(description)
     .version(version, "-v, --version", "Show MPC-create-app version.")
     .argument("[project-directory]", "Directory of the project.")
-    .option("-t, --template <template-name>", "Supported template.")
+    // .option("-t, --template <template-name>", "Supported template.")
     .allowExcessArguments(false)
-    .action(async (projectDirectory, { template }) => {
+    .action(async (projectDirectory, { template = "hello-vite" }) => {
         if (!projectDirectory) {
             projectDirectory = await getProjectName()
         }

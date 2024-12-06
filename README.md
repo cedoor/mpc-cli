@@ -56,9 +56,8 @@ npm run dev
 
 ## Supported Templates
 
-When creating a new project, you can choose from several templates:
+Other templates will be supported soon.
 
-- [**mpc-hello-next**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-next): An "Hello World" MPC app built with [Next.js](https://nextjs.org/).
 - [**mpc-hello-vite**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-vite): An "Hello World" MPC app built with [Vite](https://vite.dev).
 
 ## Repo Usage
