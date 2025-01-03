@@ -1,0 +1,41 @@
+diff --git a/dist/src/index.js b/dist/src/index.js
+index ab961e961ee2fe3f4e829fe3a426d0c3c603fb4f..c2b75ec519cfa6a9f9fa6ad99eb5c5a97e7b5356 100644
+--- a/dist/src/index.js
++++ b/dist/src/index.js
+@@ -1,4 +1,4 @@
+-import { getWasmLib, initWasmLib } from './wasmLib';
++import { getWasmLib, initWasmLib } from './wasmLib.js';
+ export async function init() {
+     await initWasmLib();
+ }
+diff --git a/dist/src/wasmLib.js b/dist/src/wasmLib.js
+index 35cbabf4080bf80a301930df03f47bb57123f098..c03ab3f49873328b31a80eee025ed877a8727116 100644
+--- a/dist/src/wasmLib.js
++++ b/dist/src/wasmLib.js
+@@ -1,4 +1,4 @@
+-import * as bindgen from '../srcWasm/summon_ts_wasm';
++import * as bindgen from '../srcWasm/summon_ts_wasm.js';
+ function base64ToUint8Array(base64) {
+     var binaryString = atob(base64);
+     var len = binaryString.length;
+@@ -12,7 +12,7 @@ let promise = undefined;
+ let lib = undefined;
+ export function initWasmLib() {
+     promise ??= (async () => {
+-        const { default: wasmBase64 } = await import('../srcWasm/summon_ts_wasm_base64');
++        const { default: wasmBase64 } = await import('../srcWasm/summon_ts_wasm_base64.js');
+         bindgen.initSync(base64ToUint8Array(wasmBase64));
+         bindgen.init_ext();
+         lib = bindgen;
+diff --git a/package.json b/package.json
+index 2de8c8bb5fe8d607f1f301b8fcc1803280d9d7a5..15034c4e2873a253650201582486254caaa54c38 100644
+--- a/package.json
++++ b/package.json
+@@ -1,6 +1,7 @@
+ {
+   "name": "summon-ts",
+   "version": "0.2.3",
++  "type": "module",
+   "description": "TypeScript build of the Summon compiler (via wasm).",
+   "main": "dist/src/index.js",
+   "scripts": {
