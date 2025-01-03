@@ -735,7 +735,7 @@ __metadata:
     rollup-plugin-cleanup: "npm:^3.2.1"
     summon-ts-pr-1: "npm:^0.1.0"
   bin:
-    summonc: dist/index.js
+    sumc: dist/index.js
   languageName: unknown
   linkType: soft
 

@@ -5,7 +5,7 @@
     "description": "A streamlined tool to compile Summon circuits.",
     "license": "MIT",
     "bin": {
-        "summonc": "dist/index.js"
+        "sumc": "dist/index.js"
     },
     "types": "dist/types/index.d.ts",
     "files": [
