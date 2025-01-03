@@ -753,7 +753,7 @@ __metadata:
     events: "npm:^3.3.0"
     mpc-framework: "npm:^0.1.1"
     rtc-pair-socket: "npm:^0.1.5"
-    summon-ts: "patch:summon-ts@npm%3A0.2.3#~/.yarn/patches/summon-ts-npm-0.2.3-ddfecf7f15.patch"
+    summon-ts: "npm:^0.2.1"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.2.0"
   languageName: unknown
@@ -7404,7 +7404,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"summon-ts@npm:0.2.3":
+"summon-ts@npm:0.2.3, summon-ts@npm:^0.2.1":
   version: 0.2.3
   resolution: "summon-ts@npm:0.2.3"
   checksum: 10/3cfa805b49726d5ba2e0d8ac908c057b597e4077540ee43a2ba6176ff8114db1866a15ab9674c15ce6e23d3905ae830cc8d5166a1b6fbf2d3a0a30b86d2c67cf
@@ -7486,7 +7486,7 @@ __metadata:
     react: "npm:19.0.0-rc-66855b96-20241106"
     react-dom: "npm:19.0.0-rc-66855b96-20241106"
     rtc-pair-socket: "npm:^0.1.5"
-    summon-ts: "patch:summon-ts@npm%3A0.2.3#~/.yarn/patches/summon-ts-npm-0.2.3-ddfecf7f15.patch"
+    summon-ts: "npm:^0.2.1"
     typescript: "npm:^5"
   languageName: unknown
   linkType: soft
