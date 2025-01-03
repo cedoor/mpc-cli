@@ -2,7 +2,7 @@
     <h1 align="center">
         MPC CLI
     </h1>
-    <p align="center">A streamlined tool for creating Multi-Party Computation (MPC) web projects with ease.</p>
+    <p align="center">A set of CLIs for creating Multi-Party Computation (MPC) web projects with ease.</p>
 </p>
 
 <p align="center">
@@ -42,23 +42,33 @@
     </h4>
 </div>
 
-| MPC-CLI is an interactive command-line tool that simplifies the development of multi-party computation (MPC) web applications with modern web development frameworks (e.g. Next.js, Vite). MPC-CLI is powered by `mpc-framework`, a lightweight framework that makes implementing MPC in TS straightforward. For more details, visit the [repository](https://github.com/voltrevo/mpc-framework). |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| MPC-CLI provides a set of interactive command-line tools that simplifies the development of multi-party computation (MPC) web applications with modern web development frameworks (e.g. Next.js, Vite). MPC-CLI is powered by [`mpc-framework`](https://github.com/voltrevo/mpc-framework) and [`summon-ts`](https://github.com/voltrevo/summon-ts). |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
 ## CLI Usage
 
+### Create
+
+A streamlined tool for creating Multi-Party Computation (MPC) projects with ease.
+
 ```bash
-npx @mpc-cli/create
+npm create @mpc-cli
 cd <your-app>
 npm install
 npm run dev
 ```
 
-## Supported Templates
-
-Other templates will be supported soon.
+The following templates are currently supported:
 
 - [**mpc-hello-vite**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-vite): An "Hello World" MPC app built with [Vite](https://vite.dev).
+
+### Summonc
+
+A streamlined CLI to compile Summon circuits.
+
+```bash
+npx @mpc-cli/summonc main.ts
+```
 
 ## Repo Usage
 
