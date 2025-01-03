@@ -1,7 +1,7 @@
 {
     "name": "@mpc-cli/summonc",
     "type": "module",
-    "version": "0.1.0",
+    "version": "0.5.0",
     "description": "A streamlined tool to compile Summon circuits.",
     "license": "MIT",
     "bin": "dist/index.js",
