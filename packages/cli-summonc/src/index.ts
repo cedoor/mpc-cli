@@ -3,7 +3,7 @@ import { program } from "commander"
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from "fs"
 import logSymbols from "log-symbols"
 import { dirname } from "path"
-import * as summon from "summon-ts"
+import * as summon from "summon-ts-pr-1"
 import { fileURLToPath } from "url"
 import Spinner from "./spinner.js"
 

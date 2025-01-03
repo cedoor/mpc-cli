@@ -733,7 +733,7 @@ __metadata:
     rimraf: "npm:^5.0.5"
     rollup: "npm:^4.12.0"
     rollup-plugin-cleanup: "npm:^3.2.1"
-    summon-ts: "patch:summon-ts@npm%3A0.2.3#~/.yarn/patches/summon-ts-npm-0.2.3-ddfecf7f15.patch"
+    summon-ts-pr-1: "npm:^0.1.0"
   bin:
     summonc: dist/index.js
   languageName: unknown
@@ -7404,17 +7404,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"summon-ts@npm:0.2.3, summon-ts@npm:^0.2.1":
-  version: 0.2.3
-  resolution: "summon-ts@npm:0.2.3"
-  checksum: 10/3cfa805b49726d5ba2e0d8ac908c057b597e4077540ee43a2ba6176ff8114db1866a15ab9674c15ce6e23d3905ae830cc8d5166a1b6fbf2d3a0a30b86d2c67cf
+"summon-ts-pr-1@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "summon-ts-pr-1@npm:0.1.0"
+  checksum: 10/77eafd589e54fa306a193153a75242eb0a924da24fe3b733f68880d6fcba72f33884135e00f78dc324f04fbb7285378c210d51f6b2764c2aeee8c7c246e31b9e
   languageName: node
   linkType: hard
 
-"summon-ts@patch:summon-ts@npm%3A0.2.3#~/.yarn/patches/summon-ts-npm-0.2.3-ddfecf7f15.patch":
+"summon-ts@npm:^0.2.1":
   version: 0.2.3
-  resolution: "summon-ts@patch:summon-ts@npm%3A0.2.3#~/.yarn/patches/summon-ts-npm-0.2.3-ddfecf7f15.patch::version=0.2.3&hash=113b43"
-  checksum: 10/ead21064d02f75da0ba6a09979a73309c84caca17636277691b16084a84578e12ac1b7a30fd621be32dfd9cbd0a46af025164cc2f67c26a85bcb04d1345e509e
+  resolution: "summon-ts@npm:0.2.3"
+  checksum: 10/3cfa805b49726d5ba2e0d8ac908c057b597e4077540ee43a2ba6176ff8114db1866a15ab9674c15ce6e23d3905ae830cc8d5166a1b6fbf2d3a0a30b86d2c67cf
   languageName: node
   linkType: hard
 
@@ -7721,11 +7721,11 @@ __metadata:
 
 "typescript@patch:typescript@npm%3A^5#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.2.2#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^5.3.3#optional!builtin<compat/typescript>":
   version: 5.7.2
-  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=d69c25"
+  resolution: "typescript@patch:typescript@npm%3A5.7.2#optional!builtin<compat/typescript>::version=5.7.2&hash=5786d5"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 10/ff27fc124bceb8969be722baa38af945b2505767cf794de3e2715e58f61b43780284060287d651fcbbdfb6f917f4653b20f4751991f17e0706db389b9bb3f75d
+  checksum: 10/d75ca10141afc64fd3474b41a8b082b640555bed388d237558aed64e5827ddadb48f90932c7f4205883f18f5bcab8b6a739a2cfac95855604b0dfeb34bc2f3eb
   languageName: node
   linkType: hard
 
