@@ -38,7 +38,6 @@ jobs:
               run: yarn version:publish
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-                  SOLDEER_LOGIN_FILE: ${{ github.workspace }}/soldeer_login
 
             - run: yarn version:release
               env:
