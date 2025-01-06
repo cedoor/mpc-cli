@@ -1,0 +1,6 @@
+// Next.js doesn't support import.meta.glob, so a asset module has been
+// configured in the next.config.ts file.
+
+export default function main(a, b) {
+    return a > b ? a : b;
+}
