@@ -45,7 +45,7 @@ program
         }
 
         writeFileSync(`${currentDirectory}/output/circuit.txt`, circuit.bristol, "utf8")
-        writeFileSync(`${currentDirectory}/output/circuit.json`, JSON.stringify(circuit.info, null, 4), "utf8")
+        writeFileSync(`${currentDirectory}/output/circuit_info.json`, JSON.stringify(circuit.info, null, 4), "utf8")
 
         console.info(`\n ${logSymbols.success}`, `Your circuit has been compiled.\n`)
         console.info(` Check the ${chalk.cyan("output")} folder!\n`)
