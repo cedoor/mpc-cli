@@ -41,6 +41,6 @@
         "commander": "^12.0.0",
         "log-symbols": "^6.0.0",
         "ora": "^8.0.1",
-        "summon-ts-pr-1": "^0.1.0"
+        "summon-ts": "^0.2.4"
     }
 }
