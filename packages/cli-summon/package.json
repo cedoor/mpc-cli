@@ -1,7 +1,7 @@
 {
     "name": "@mpc-cli/summon",
     "type": "module",
-    "version": "0.5.1",
+    "version": "0.6.0",
     "description": "A streamlined tool to compile Summon circuits.",
     "license": "MIT",
     "bin": {
