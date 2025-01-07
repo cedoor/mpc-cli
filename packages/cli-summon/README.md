@@ -1,6 +1,6 @@
 <p align="center">
     <h1 align="center">
-        MPC CLI Summonc
+        MPC CLI Summon
     </h1>
     <p align="center">A streamlined tool to compile Summon circuits.</p>
 </p>
@@ -10,13 +10,13 @@
         <img src="https://img.shields.io/badge/project-MPC_CLI-blue.svg?style=flat-square">
     </a>
     <a href="https://github.com/cedoor/mpc-cli/blob/main/LICENSE">
-        <img alt="NPM license" src="https://img.shields.io/npm/l/@mpc-cli/summonc?style=flat-square">
+        <img alt="NPM license" src="https://img.shields.io/npm/l/@mpc-cli/summon?style=flat-square">
     </a>
-    <a href="https://www.npmjs.com/package/@mpc-cli/summonc">
-        <img alt="NPM version" src="https://img.shields.io/npm/v/@mpc-cli/summonc?style=flat-square" />
+    <a href="https://www.npmjs.com/package/@mpc-cli/summon">
+        <img alt="NPM version" src="https://img.shields.io/npm/v/@mpc-cli/summon?style=flat-square" />
     </a>
-    <a href="https://npmjs.org/package/@mpc-cli/summonc">
-        <img alt="Downloads" src="https://img.shields.io/npm/dm/@mpc-cli/summonc.svg?style=flat-square" />
+    <a href="https://npmjs.org/package/@mpc-cli/summon">
+        <img alt="Downloads" src="https://img.shields.io/npm/dm/@mpc-cli/summon.svg?style=flat-square" />
     </a>
     <a href="https://eslint.org/">
         <img alt="Linter eslint" src="https://img.shields.io/badge/linter-eslint-8080f2?style=flat-square&logo=eslint" />
@@ -45,5 +45,11 @@
 ## Usage
 
 ```bash
-npx @mpc-cli/summonc main.ts
+npx @mpc-cli/summon main.ts
+```
+
+Or:
+
+```bash
+npm i -g @mpc-cli/summon && summonc main.ts
 ```

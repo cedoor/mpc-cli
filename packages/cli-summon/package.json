@@ -1,11 +1,11 @@
 {
-    "name": "@mpc-cli/summonc",
+    "name": "@mpc-cli/summon",
     "type": "module",
     "version": "0.5.1",
     "description": "A streamlined tool to compile Summon circuits.",
     "license": "MIT",
     "bin": {
-        "sumc": "dist/index.js"
+        "summonc": "dist/index.js"
     },
     "types": "dist/types/index.d.ts",
     "files": [
@@ -15,7 +15,7 @@
         "README.md"
     ],
     "repository": "https://github.com/cedoor/mpc-cli",
-    "homepage": "https://github.com/cedoor/mpc-cli/tree/main/packages/cli-summonc",
+    "homepage": "https://github.com/cedoor/mpc-cli/tree/main/packages/cli-summon",
     "bugs": {
         "url": "https://github.com/cedoor/mpc-cli.git/issues"
     },

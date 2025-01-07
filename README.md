@@ -62,12 +62,18 @@ The following templates are currently supported:
 
 - [**mpc-hello-vite**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-vite): An "Hello World" MPC app built with [Vite](https://vite.dev).
 
-### Summonc
+### Summon
 
 A streamlined CLI to compile Summon circuits.
 
 ```bash
-npx @mpc-cli/summonc main.ts
+npx @mpc-cli/summon main.ts
+```
+
+Or:
+
+```bash
+npm i -g @mpc-cli/summon && summonc main.ts
 ```
 
 ## Repo Usage

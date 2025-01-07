@@ -730,9 +730,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@mpc-cli/summonc@workspace:packages/cli-summonc":
+"@mpc-cli/summon@workspace:packages/cli-summon":
   version: 0.0.0-use.local
-  resolution: "@mpc-cli/summonc@workspace:packages/cli-summonc"
+  resolution: "@mpc-cli/summon@workspace:packages/cli-summon"
   dependencies:
     "@rollup/plugin-typescript": "npm:^11.1.6"
     chalk: "npm:^5.3.0"
@@ -744,7 +744,7 @@ __metadata:
     rollup-plugin-cleanup: "npm:^3.2.1"
     summon-ts: "npm:^0.2.4"
   bin:
-    sumc: dist/index.js
+    summonc: dist/index.js
   languageName: unknown
   linkType: soft
 
