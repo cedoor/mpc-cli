@@ -1,14 +1,12 @@
+import {EmpWasmBackend} from "emp-wasm-backend"
+import {Protocol} from "mpc-framework"
 import * as summon from "summon-ts"
-import { Protocol } from "mpc-framework"
-import { EmpWasmBackend } from "emp-wasm-backend"
-import main from '../circuit/main?raw';
+import getCircuitFile from "./getCircuitFiles"
 
 export default async function generateProtocol() {
     await summon.init()
 
-    const circuit = summon.compileBoolean("circuit/main.ts", 16, {
-        "circuit/main.ts": main
-    })
+    const circuit = summon.compileBoolean("circuit/main.ts", 16, await getCircuitFile())
 
     const mpcSettings = [
         {
