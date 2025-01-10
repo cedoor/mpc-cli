@@ -1,6 +1,17 @@
 {
     "name": "@mpc-cli/template-hello-next",
     "version": "0.7.1",
+    "files": [
+        "!.next/*",
+        "src",
+        ".eslintrc.json",
+        "next.config.ts",
+        "next-env.d.ts",
+        "public",
+        "tsconfig.json",
+        "gitignore",
+        "README.md"
+    ],
     "scripts": {
         "dev": "next dev",
         "build": "next build",
