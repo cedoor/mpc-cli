@@ -1,6 +1,6 @@
 {
-    "name": "template-hello-next",
-    "version": "0.7.0",
+    "name": "@mpc-cli/template-hello-next",
+    "version": "0.7.1",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
