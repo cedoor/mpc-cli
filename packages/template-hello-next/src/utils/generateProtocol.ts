@@ -1,6 +1,6 @@
+import {EmpWasmBackend} from "emp-wasm-backend"
+import {Protocol} from "mpc-framework"
 import * as summon from "summon-ts"
-import { Protocol } from "mpc-framework"
-import { EmpWasmBackend } from "emp-wasm-backend"
 import getCircuitFiles from "./getCircuitFiles"
 
 export default async function generateProtocol() {

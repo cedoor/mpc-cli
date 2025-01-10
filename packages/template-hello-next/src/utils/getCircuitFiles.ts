@@ -1,13 +1,17 @@
+// Since Next.js does not support import.meta.glob, fetch
+// is used here instead.
 export default async function getCircuitFiles() {
-    const circuitFiles: Record<string, string> = {}
+    const files: Record<string, string> = {
+        "circuit/main.ts": "",
+        "circuit/isLarger.ts": ""
+    }
 
-    const content = await import("../circuit/main.ts")
+    for (const path of Object.keys(files)) {
+        const response = await fetch(path)
+        const code = await response.text()
 
-    console.log(content)
+        files[path] = code
+    }
 
-    //for (const [path, get] of Object.entries(files)) {
-    //circuitFiles[path.slice(2)] = (await get()) as string
-    //}
-
-    return circuitFiles
+    return files
 }
