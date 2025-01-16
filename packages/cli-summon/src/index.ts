@@ -16,9 +16,10 @@ program
     .name("mpc-cli-summonc")
     .description(description)
     .version(version, "-v, --version", "Show MPC-create-app version.")
+    .option("--boolify-width <width>", "Produce boolean circuits with a specific width.")
     .argument("<circuit-file>", "Circuit file to compile.")
     .allowExcessArguments(false)
-    .action(async (circuitFilePath) => {
+    .action(async (circuitFilePath, { boolifyWidth }) => {
         if (!existsSync(circuitFilePath)) {
             console.info(`\n ${logSymbols.error}`, `error: the '${circuitFilePath}' file does not exist\n`)
             return
@@ -32,7 +33,10 @@ program
 
         await summon.init()
 
-        const circuit = summon.compile(circuitFilePath, (filePath) => readFileSync(filePath, "utf8"))
+        const fileReader = (filePath: string) => readFileSync(filePath, "utf8")
+        const circuit = boolifyWidth
+            ? summon.compileBoolean(circuitFilePath, boolifyWidth, fileReader)
+            : summon.compile(circuitFilePath, fileReader)
 
         spinner.stop()
 
