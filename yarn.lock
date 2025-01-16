@@ -7503,9 +7503,9 @@ __metadata:
   linkType: hard
 
 "summon-ts@npm:^0.2.4":
-  version: 0.2.4
-  resolution: "summon-ts@npm:0.2.4"
-  checksum: 10/b4df5e6e8c998b44551dd201292dc8e8b0ab39f2399a117c851acc7be09a72f0b8335e5b2a45c030528689b584137386dd25de5880249ff58658b052f243cbd5
+  version: 0.2.5
+  resolution: "summon-ts@npm:0.2.5"
+  checksum: 10/7fa53c2aa9ff44589a44817753deae30f24d97403244d347ed4cfaecaf68e5e2d414ccfba2ff9337102c80580d62153837b5712c0515deea9605db71f2c13ab3
   languageName: node
   linkType: hard
 

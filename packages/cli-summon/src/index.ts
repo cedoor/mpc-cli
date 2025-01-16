@@ -28,15 +28,11 @@ program
 
         const spinner = new Spinner(`Compiling your circuit`)
 
-        const circuitCode = readFileSync(circuitFilePath, "utf8")
-
         spinner.start()
 
         await summon.init()
 
-        const circuit = summon.compile("/src/main.ts", {
-            "/src/main.ts": circuitCode
-        })
+        const circuit = summon.compile(circuitFilePath, (filePath) => readFileSync(filePath, "utf8"))
 
         spinner.stop()
 
