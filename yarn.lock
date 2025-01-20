@@ -742,7 +742,7 @@ __metadata:
     rimraf: "npm:^5.0.5"
     rollup: "npm:^4.12.0"
     rollup-plugin-cleanup: "npm:^3.2.1"
-    summon-ts: "npm:^0.2.4"
+    summon-ts: "npm:^0.3.0"
   bin:
     summonc: dist/index.js
   languageName: unknown
@@ -755,14 +755,14 @@ __metadata:
     "@types/node": "npm:^20"
     "@types/react": "npm:^19"
     "@types/react-dom": "npm:^19"
-    emp-wasm-backend: "npm:0.2.0"
+    emp-wasm-backend: "npm:0.2.2"
     events: "npm:^3.3.0"
-    mpc-framework: "npm:^0.1.1"
+    mpc-framework: "npm:^0.1.3"
     next: "npm:15.1.4"
     react: "npm:19.0.0"
     react-dom: "npm:19.0.0"
     rtc-pair-socket: "npm:^0.1.5"
-    summon-ts: "npm:0.2.3"
+    summon-ts: "npm:0.3.0"
     typescript: "npm:^5"
   languageName: unknown
   linkType: soft
@@ -773,15 +773,15 @@ __metadata:
   dependencies:
     "@typescript-eslint/eslint-plugin": "npm:^7.2.0"
     "@typescript-eslint/parser": "npm:^7.2.0"
-    emp-wasm-backend: "npm:0.2.0"
+    emp-wasm-backend: "npm:0.2.2"
     eslint: "npm:^8.57.0"
     eslint-config-xo: "npm:^0.44.0"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-react-refresh: "npm:^0.4.6"
     events: "npm:^3.3.0"
-    mpc-framework: "npm:^0.1.1"
+    mpc-framework: "npm:^0.1.3"
     rtc-pair-socket: "npm:^0.1.5"
-    summon-ts: "npm:0.2.3"
+    summon-ts: "npm:0.3.0"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.2.0"
   languageName: unknown
@@ -2911,6 +2911,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ee-typed@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "ee-typed@npm:0.1.1"
+  dependencies:
+    "@types/node": "npm:^20.14.2"
+    typed-emitter: "npm:^2.1.0"
+  checksum: 10/157ef33d82e1f692a1642613551ccfe8e3503b70ed99b8eab6b1fdf2f4d4a3f2cd65d9ef2e2d63d8789a9369b6ad549abfeefb41a8c01ae9d6fd66c812473f1f
+  languageName: node
+  linkType: hard
+
 "emoji-regex@npm:^10.3.0":
   version: 10.4.0
   resolution: "emoji-regex@npm:10.4.0"
@@ -2932,25 +2942,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"emp-wasm-backend@npm:0.2.0":
-  version: 0.2.0
-  resolution: "emp-wasm-backend@npm:0.2.0"
+"emp-wasm-backend@npm:0.2.2":
+  version: 0.2.2
+  resolution: "emp-wasm-backend@npm:0.2.2"
   dependencies:
-    emp-wasm: "npm:^0.1.7"
-    mpc-framework-common: "npm:^0.1.0"
+    emp-wasm: "npm:^0.1.8"
+    mpc-framework-common: "npm:^0.1.1"
     msgpackr: "npm:^1.11.0"
     sha3: "npm:^2.1.4"
-  checksum: 10/8a6699dcda8cb85a0e11459f37e7cbab993cb2ed83188b2e1c1e70f1aaf95c27815a1885de89cbbdde6dd3da4f0d00c2018b153e69bbaa5fb7cedc48145707ba
+  checksum: 10/52b862ac0276b6b0d60706eb4dfd3b641dc2018e7beb6a9461f07a2326a1083111be0d26eb89bb20332b878eef376cf420e82cd1f0107a511b13ab06808d87df
   languageName: node
   linkType: hard
 
-"emp-wasm@npm:^0.1.7":
-  version: 0.1.7
-  resolution: "emp-wasm@npm:0.1.7"
+"emp-wasm@npm:^0.1.8":
+  version: 0.1.8
+  resolution: "emp-wasm@npm:0.1.8"
   dependencies:
-    ee-typed: "npm:^0.1.0"
+    ee-typed: "npm:^0.1.1"
     events: "npm:^3.3.0"
-  checksum: 10/f276772dd5a2c7bd5489ee77a7e237ce12f9261c29022d769008a79f9347fdc457ea4791773578319509eb0cb0a5bb3200d1c411d78675f90514ef9fabd7305c
+  checksum: 10/432ec7d7a3d5eebbabadc6d1431e47c5fac0ef88bf5f1244e0c4b751d80cd90a42d149ea139b3f5c6125b173e724c71d7d4ace68d29b3f3c19faa2880748cb39
   languageName: node
   linkType: hard
 
@@ -5478,26 +5488,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"mpc-framework-common@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "mpc-framework-common@npm:0.1.0"
-  dependencies:
-    ee-typed: "npm:^0.1.0"
-    msgpackr: "npm:^1.11.0"
-    zod: "npm:^3.23.8"
-  checksum: 10/548b2b5508c2cad828d031b362067ea50541541d91da3fb5a27bffd6b3a46ef0da91e85fbf853584af9ac5d51b429e799260f62494be93531a23311b8995edf9
+"mpc-framework-common@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "mpc-framework-common@npm:0.1.1"
+  checksum: 10/8038c609bbbbe2fd0c57110e86fb5ae061b64551631cb3009744790fce47aa5b927abc4d248a72227f9b7c0a199710a20010b8e30e5306ac6cb1e50720ccfcaa
   languageName: node
   linkType: hard
 
-"mpc-framework@npm:^0.1.1":
-  version: 0.1.2
-  resolution: "mpc-framework@npm:0.1.2"
+"mpc-framework@npm:^0.1.3":
+  version: 0.1.4
+  resolution: "mpc-framework@npm:0.1.4"
   dependencies:
-    ee-typed: "npm:^0.1.0"
-    mpc-framework-common: "npm:^0.1.0"
+    ee-typed: "npm:^0.1.1"
+    mpc-framework-common: "npm:^0.1.1"
     msgpackr: "npm:^1.11.0"
     zod: "npm:^3.23.8"
-  checksum: 10/c9db6c8c73827fa8bf44a553e9bddce9affb81d4a1a37c2f1f579190c7200b60be84002e2b13c2504dd1623e16b8b5992bb5120e953dc294e3498ccbcb82fdea
+  checksum: 10/ce829fa0843109f854c456ee9ea9db74322e6e6da5452f0c3b2b4d6fb085e316b5cc03e79316cf4c70e2523f4b3f8c176d81497d439dbbbf554ca3c8c5f85d6f
   languageName: node
   linkType: hard
 
@@ -7495,17 +7501,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"summon-ts@npm:0.2.3":
-  version: 0.2.3
-  resolution: "summon-ts@npm:0.2.3"
-  checksum: 10/3cfa805b49726d5ba2e0d8ac908c057b597e4077540ee43a2ba6176ff8114db1866a15ab9674c15ce6e23d3905ae830cc8d5166a1b6fbf2d3a0a30b86d2c67cf
-  languageName: node
-  linkType: hard
-
-"summon-ts@npm:^0.2.4":
-  version: 0.2.5
-  resolution: "summon-ts@npm:0.2.5"
-  checksum: 10/7fa53c2aa9ff44589a44817753deae30f24d97403244d347ed4cfaecaf68e5e2d414ccfba2ff9337102c80580d62153837b5712c0515deea9605db71f2c13ab3
+"summon-ts@npm:0.3.0, summon-ts@npm:^0.3.0":
+  version: 0.3.0
+  resolution: "summon-ts@npm:0.3.0"
+  checksum: 10/128d510678c6ff4c6b40dab324984f14c16ab319c7728e5bbd1e269eafa8e3bf337e7097f35943c991db957ac154493dd70c1c62074c194dd13524719bb4dff8
   languageName: node
   linkType: hard
 

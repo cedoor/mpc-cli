@@ -19,14 +19,14 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "emp-wasm-backend": "0.2.0",
+        "emp-wasm-backend": "0.2.2",
         "events": "^3.3.0",
-        "mpc-framework": "^0.1.1",
+        "mpc-framework": "^0.1.3",
         "next": "15.1.4",
         "react": "19.0.0",
         "react-dom": "19.0.0",
         "rtc-pair-socket": "^0.1.5",
-        "summon-ts": "0.2.3"
+        "summon-ts": "0.3.0"
     },
     "devDependencies": {
         "@types/node": "^20",
