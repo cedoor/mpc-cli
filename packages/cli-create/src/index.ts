@@ -37,7 +37,8 @@ export const supportedTemplates = [
     {
         value: "hello-nextjs",
         description: "MPC Hello with NextJS (client <> client)",
-        repository: "cedoor/mpc-hello-nextjs"
+        repository: "voltrevo/mpc-hello",
+        directory: "next-js"
     },
     {
         value: "lizard-spock",
