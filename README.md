@@ -60,8 +60,12 @@ npm run dev
 
 The following templates are currently supported:
 
-- [**mpc-hello-vite**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-vite): An "Hello World" MPC app built with [Vite](https://vite.dev).
-- [**mpc-hello-next**](https://github.com/cedoor/mpc-cli/tree/main/packages/template-hello-next): An "Hello World" MPC app built with [Next.js](https://nextjs.org).
+- [**MPC Hello with Vite (client-client)**](https://github.com/voltrevo/mpc-hello/tree/main/client-client)
+- [**MPC Hello with Vite (client-server)**](https://github.com/voltrevo/mpc-hello/tree/main/client-server)
+- [**MPC Hello with Vite (server-server)**](https://github.com/voltrevo/mpc-hello/tree/main/server-server)
+- [**MPC Hello with NextJS (client-client)**](https://github.com/voltrevo/mpc-hello/tree/main/next-js)
+- [**Rock Paper Shissors Lizard Spock (client-client)**](https://github.com/voltrevo/mpc-lizard-spock)
+- [**2PC is for lovers (client-client)**](https://github.com/voltrevo/2pc-is-for-lovers)
 
 ### Summon
 
