@@ -11,6 +11,7 @@ export async function getProjectName() {
         message: "What is your project name?",
         default: "my-app"
     })
+
     return projectName
 }
 
@@ -20,16 +21,17 @@ export async function getProjectName() {
  * @param supportedTemplates An array of objects, each containing a 'value' and 'name' property for the template.
  * @returns A promise that resolves to the selected template's value.
  */
-export async function getSupportedTemplate(supportedTemplates: { value: string; name: string }[]) {
+export async function getSupportedTemplate(supportedTemplates: any[]) {
     const { selectedTemplate } = await inquirer.prompt({
         name: "selectedTemplate",
         type: "list",
         message: "Select one of the supported templates:",
         default: 0,
         choices: supportedTemplates.map((template) => ({
-            value: template.value,
-            name: `${template.value} (${template.name})`
+            value: template,
+            name: template.description
         }))
     })
+
     return selectedTemplate
 }

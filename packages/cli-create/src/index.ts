@@ -1,27 +1,54 @@
 import chalk from "chalk"
 import { program } from "commander"
-import { existsSync, readFileSync, renameSync } from "fs"
+import { existsSync, readFileSync, renameSync, rmSync } from "fs"
 import logSymbols from "log-symbols"
-import pacote from "pacote"
 import { dirname } from "path"
+import { CleanOptions, simpleGit, SimpleGit } from "simple-git"
 import { fileURLToPath } from "url"
-import checkLatestVersion from "./checkLatestVersion.js"
 import { getProjectName, getSupportedTemplate } from "./inquirerPrompts.js"
 import Spinner from "./spinner.js"
+
+const git: SimpleGit = simpleGit().clean(CleanOptions.FORCE)
 
 // Define the path to the package.json file to extract metadata for the CLI.
 const packagePath = `${dirname(fileURLToPath(import.meta.url))}/..`
 const { description, version } = JSON.parse(readFileSync(`${packagePath}/package.json`, "utf8"))
 
 // List of supported templates for project creation.
-const supportedTemplates = [
+export const supportedTemplates = [
     {
-        value: "hello-vite",
-        name: "MPC Hello with Vue and Vite"
+        value: "hello-cc",
+        description: "MPC Hello with Vite (client <> client)",
+        repository: "voltrevo/mpc-hello",
+        directory: "client-client"
     },
     {
-        value: "hello-next",
-        name: "MPC Hello with React and Next.js"
+        value: "hello-cs",
+        description: "MPC Hello with Vite (client <> server)",
+        repository: "voltrevo/mpc-hello",
+        directory: "client-server"
+    },
+    {
+        value: "hello-ss",
+        description: "MPC Hello with Vite (server <> server)",
+        repository: "voltrevo/mpc-hello",
+        directory: "server-server"
+    },
+    {
+        value: "hello-nextjs",
+        description: "MPC Hello with NextJS (client <> client)",
+        repository: "voltrevo/mpc-hello",
+        directory: "next-js"
+    },
+    {
+        value: "lizard-spock",
+        description: "Rock Paper Shissors Lizard Spock (client <> client)",
+        repository: "voltrevo/mpc-lizard-spock"
+    },
+    {
+        value: "lovers",
+        description: "2PC is for lovers (client <> client)",
+        repository: "voltrevo/2pc-is-for-lovers"
     }
 ]
 
@@ -36,39 +63,54 @@ program
     .action(async (projectDirectory, { template }) => {
         if (!projectDirectory) {
             projectDirectory = await getProjectName()
+            console.info("")
         }
 
         if (!template) {
             template = await getSupportedTemplate(supportedTemplates)
-        }
+            console.info("")
+        } else {
+            template = supportedTemplates.find((t) => t.value === template)
 
-        if (!supportedTemplates.some((t) => t.value === template)) {
-            console.info(`\n ${logSymbols.error}`, `error: the template '${template}' is not supported\n`)
-            return
+            if (!template) {
+                console.info(` ${logSymbols.error}`, `error: the template '${template}' is not supported\n`)
+                return
+            }
         }
 
         const currentDirectory = process.cwd()
         const spinner = new Spinner(`Creating your project in ${chalk.green(`./${projectDirectory}`)}`)
 
         if (existsSync(projectDirectory)) {
-            console.info(`\n ${logSymbols.error}`, `error: the '${projectDirectory}' folder already exists\n`)
+            console.info(`${logSymbols.error}`, `error: the '${projectDirectory}' folder already exists\n`)
             return
         }
 
         spinner.start()
 
-        await checkLatestVersion(version)
+        // Clone the repository of the app into the project directory.
+        await git.clone(`https://github.com/${template.repository}.git`, projectDirectory, [
+            "--depth",
+            "1",
+            "--single-branch"
+        ])
 
-        // Extract the template package into the project directory.
-        await pacote.extract(`@mpc-cli/template-${template}@${version}`, `${currentDirectory}/${projectDirectory}`)
+        // ...
+        if (template.directory) {
+            renameSync(`${currentDirectory}/${projectDirectory}`, `${currentDirectory}/${projectDirectory}-tmp`)
 
-        // Rename the gitignore file to .gitignore.
-        renameSync(
-            `${currentDirectory}/${projectDirectory}/gitignore`,
-            `${currentDirectory}/${projectDirectory}/.gitignore`
-        )
+            renameSync(
+                `${currentDirectory}/${projectDirectory}-tmp/${template.directory}`,
+                `${currentDirectory}/${projectDirectory}`
+            )
 
-        // Read and modify package.json to remove prepublish script
+            rmSync(`${currentDirectory}/${projectDirectory}-tmp`, { recursive: true })
+        } else {
+            // Remove the .git file.
+            rmSync(`${currentDirectory}/${projectDirectory}/.git`, { recursive: true })
+        }
+
+        // Get content from package.json file.
         const packageJsonPath = `${currentDirectory}/${projectDirectory}/package.json`
         const packageJsonContent = readFileSync(packageJsonPath, "utf8")
 
