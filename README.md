@@ -125,14 +125,6 @@ git commit
 
 It will also automatically check that the modified files comply with ESLint and Prettier rules.
 
-### Testing
-
-Run [Jest](https://jestjs.io/) to test the JS libraries:
-
-```bash
-yarn test
-```
-
 ### Build libraries
 
 Run [Rollup](https://www.rollupjs.org) to build all the packages:
